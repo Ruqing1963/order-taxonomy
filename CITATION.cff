@@ -1,0 +1,79 @@
+cff-version: 1.2.0
+message: "If you use this paper, its code or its data, please cite it as below."
+title: "When does sequence order matter? An information-theoretic taxonomy of biological representation tasks and the limits of local encoding"
+abstract: >-
+  For any sequence of length L over an alphabet of size q and any local order k, the
+  specification cost L log2 q splits exactly into a composition constraint, the resolved
+  local-syntax information and the unresolved global-order entropy B_k(S), the fibre entropy
+  of the k-spectrum. Evaluated across the 20,431 reviewed human proteins for 1 <= k <= 50, the
+  decomposition separates globular enzymes and receptors (median spectral resolution 5, 95th
+  percentile 7) from C2H2 zinc-finger regulators, structural tandem repeats and hominoid
+  segmental-duplication arrays, which form the tail of unresolved order at k > 10. Combined
+  with the seven companion studies, this yields a decision rule for choosing sequence
+  encoders in computational biology.
+type: software
+authors:
+  - family-names: Chen
+    given-names: Zhengyi
+    email: chenzhengyi@glmc.edu.cn
+    affiliation: "School of Pharmacy, Guilin Medical University, Guilin, China"
+  - family-names: Chen
+    given-names: Ruqing
+    email: ruqing@hotmail.com
+    affiliation: "GUT Geoservice Inc., Montreal, Canada"
+doi: 10.5281/zenodo.23003752
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23003752
+    description: "Zenodo archive of the paper, code, data and results"
+repository-code: "https://github.com/Ruqing1963/order-taxonomy"
+url: "https://doi.org/10.5281/zenodo.23003752"
+date-released: 2026-09-27
+version: 1.0.0
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - sequence representation
+  - spectral fibre
+  - fibre entropy
+  - spectral resolution
+  - human proteome
+  - local encoders
+  - protein language models
+  - repeat proteins
+  - representation selection
+references:
+  - type: article
+    title: "Separation without resolution: the spectral fibre geometry of the human proteome and the blind spots of local sequence encoders"
+    authors:
+      - family-names: Chen
+        given-names: Zhengyi
+      - family-names: Chen
+        given-names: Ruqing
+    doi: 10.5281/zenodo.22959211
+    publisher:
+      name: Zenodo
+    year: 2026
+  - type: book
+    title: "Algebraic Genomics: The Combinatorics of Sequence Reconstruction and Representation"
+    authors:
+      - family-names: Chen
+        given-names: Ruqing
+    doi: 10.5281/zenodo.22943487
+    publisher:
+      name: Zenodo
+    year: 2026
+preferred-citation:
+  type: article
+  title: "When does sequence order matter? An information-theoretic taxonomy of biological representation tasks and the limits of local encoding"
+  authors:
+    - family-names: Chen
+      given-names: Zhengyi
+    - family-names: Chen
+      given-names: Ruqing
+  doi: 10.5281/zenodo.23003752
+  publisher:
+    name: Zenodo
+  year: 2026
+  url: "https://doi.org/10.5281/zenodo.23003752"

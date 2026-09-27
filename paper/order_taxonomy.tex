@@ -42,7 +42,7 @@ Guilin 541199, P.~R.~China\\
 Ruqing Chen\\[2pt]
 \normalsize GUT Geoservice Inc., Montreal, Qu\'ebec, Canada\\
 \normalsize\texttt{ruqing@hotmail.com}}
-\date{27 September 2026}
+\date{27 September 2026\\[4pt]\small DOI: \href{https://doi.org/10.5281/zenodo.23003752}{10.5281/zenodo.23003752}}
 
 \begin{document}
 \maketitle
@@ -336,7 +336,8 @@ nucleic-acid class $\mathcal X$, our results reduce encoder selection to four ve
 \item \textbf{Check the spectral resolution $\kappa(\mathcal X)$ of the target sequences.}
 Compute $\kappa(S)$ (in $O(L\log L)$ time via suffix arrays or de~Bruijn Eulerian degree checks) for the sequences
 in $\mathcal X$. If the target class consists of globular enzymes, transporters or non-repetitive cellular proteins,
-$95\%$ of sequences satisfy $\kappa(S)\le7$ and $99\%$ satisfy $\kappa(S)\le10$ (Table~\ref{tab:classes}). Any
+$95\%$ of sequences satisfy $\kappa(S)\le7$ ($\le8$ for general cellular proteins) and $97.8$--$99.2\%$ satisfy
+$\kappa(S)\le10$ (Table~\ref{tab:classes}). Any
 encoder with receptive field $R\ge10$ is injective on almost the entire domain.
 \item \textbf{Check phenotypic sufficiency on the fibre $F_R(S)$.}
 If $\mathcal X$ contains repeat proteins with $\kappa(S)>R$, test whether the target phenotype $Y$ is invariant
@@ -360,8 +361,8 @@ read-outs) whenever the downstream task depends on which repeat copy is modified
 The script \texttt{code/order\_taxonomy.py} computes the exact information decomposition (Table~\ref{tab:decomp}),
 the functional class breakdown (Table~\ref{tab:classes}) and Figure~\ref{fig:taxonomy} from the proteome fibre
 catalogue, writing \texttt{results/order\_taxonomy\_output.txt} and
-\texttt{results/order\_taxonomy\_summary.json}. Code, results and manuscript sources are available at
-\url{https://github.com/Ruqing1963/order-taxonomy}.
+\texttt{results/order\_taxonomy\_summary.json}. Code, data, results, the figure and this paper are at
+\url{https://github.com/Ruqing1963/order-taxonomy} and are archived at \doi{10.5281/zenodo.23003752}.
 
 \section*{Funding}
 This project was supported by the National Natural Science Foundation of China (No.~22464010), the

@@ -10,7 +10,7 @@ International** licence (CC BY 4.0):
 
 Attribution: *Zhengyi Chen and Ruqing Chen, When does sequence order matter? An
 information-theoretic taxonomy of biological representation tasks and the limits of local
-encoding, Zenodo (2026).*
+encoding, Zenodo (2026), doi:10.5281/zenodo.23003752.*
 
 `data/fibre_results.json` (exact fibre sizes N_k and spectral resolution κ for every reviewed
 human protein) is taken unchanged from the companion repository

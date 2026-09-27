@@ -1,5 +1,4 @@
 # Exact orthogonal decomposition of sequence information across 20,431 human proteins
-import gzip
 import json
 import math
 import os
@@ -8,7 +7,12 @@ from collections import Counter
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-import numpy as np
+from matplotlib.ticker import FixedLocator, FuncFormatter, NullFormatter
+
+# Embed TrueType fonts and use an ASCII hyphen for negative signs, so that the PDF
+# shows the exponents of the log axes and the Greek letters correctly.
+matplotlib.rcParams["pdf.fonttype"] = 42
+matplotlib.rcParams["axes.unicode_minus"] = False
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -28,26 +32,6 @@ with open(DATA_PATH, "r", encoding="utf-8") as f:
     raw = json.load(f)
 
 proteins = raw["proteins"] if isinstance(raw, dict) and "proteins" in raw else raw
-
-TSV_CANDIDATES = [
-    os.path.join(ROOT, "..", "separation-resolution", "results", "uniprot_hs_reviewed.tsv.gz"),
-    os.path.join(ROOT, "..", "results", "uniprot_hs_reviewed.tsv.gz"),
-    os.path.join(ROOT, "..", "data", "uniprot_hs_reviewed.tsv.gz"),
-]
-seq_map = {}
-name_map = {}
-for tp in TSV_CANDIDATES:
-    if os.path.exists(tp):
-        with gzip.open(tp, "rt", encoding="utf-8") as gf:
-            header = gf.readline()
-            for line in gf:
-                parts = line.rstrip("\n").split("\t")
-                if len(parts) >= 2:
-                    acc = parts[0]
-                    seq_map[acc] = parts[-1]
-                    if len(parts) >= 4:
-                        name_map[acc] = " ".join(parts[1:-1])
-        break
 
 LOG2_20 = math.log2(20.0)
 LN2 = math.log(2.0)
@@ -70,11 +54,12 @@ def extract_Bk_dict(p):
                         pass
     return out
 
-def classify_class(p, extra_text=""):
+def classify_class(p):
+    # Six classes from the gene symbol and the UniProt family annotation of fibre_results.json
     gene = (p.get("gene") or "").upper()
     fam = (p.get("fam") or p.get("family") or "").lower()
     name = (p.get("name") or p.get("protein_name") or "").lower()
-    text = f"{fam} {name} {extra_text}".lower()
+    text = f"{fam} {name}".lower()
     if any(x in fam.upper() for x in ("NBPF", "GOLGA6", "NPIP", "POTE")) or gene.startswith(("NBPF", "GOLGA6", "NPIP", "POTE")):
         return "Segmental-duplication arrays"
     if "c2h2" in text or "zinc-finger" in text or "zinc finger" in text or gene.startswith(("ZNF", "KLF", "PRDM", "ZBTB", "ZSCAN", "ZKSCAN", "ZFP")):
@@ -95,8 +80,6 @@ for p in proteins:
     bmap = extract_Bk_dict(p)
     if 1 in bmap and bmap[1] > 0:
         B1 = bmap[1]
-    elif acc in seq_map:
-        B1 = exact_B1_from_seq(seq_map[acc])
     elif "seq" in p:
         B1 = exact_B1_from_seq(p["seq"])
     else:
@@ -112,7 +95,7 @@ for p in proteins:
         "I_total": I_total,
         "I_comp": I_comp,
         "B": bmap,
-        "cls": classify_class(p, name_map.get(acc, "")),
+        "cls": classify_class(p),
     })
 
 avail_ks = sorted({k for r in records for k in r["B"].keys()})
@@ -200,9 +183,12 @@ ax1.set_xscale("log")
 ax1.set_yscale("log")
 ax1.set_xlabel("local encoder order $k$")
 ax1.set_ylabel("unresolved global order $B_k(S)/B_1(S)$ (%)")
-ax1.set_title("Residual global order information across $k$", fontsize=10, fontweight="bold")
+ax1.set_title("Residual global order information across $k$", fontsize=10)
 ax1.grid(True, which="both", linestyle=":", alpha=0.5)
 ax1.legend(fontsize=7.2, loc="upper right", frameon=True)
+ax1.yaxis.set_major_locator(FixedLocator([1e-4, 1e-3, 1e-2, 1e-1, 1e0, 1e1, 1e2]))
+ax1.yaxis.set_major_formatter(FuncFormatter(lambda v, _: "$10^{%d}$" % round(math.log10(v))))
+ax1.yaxis.set_minor_formatter(NullFormatter())
 
 # Right panel: share of proteins with B_k(S) > 0 (kappa > k) across k by class
 for c in classes:
@@ -215,8 +201,11 @@ ax2.set_xscale("log")
 ax2.set_yscale("log")
 ax2.set_xlabel("local encoder order $k$")
 ax2.set_ylabel("proteins with $B_k(S)>0$ (%)")
-ax2.set_title("Unresolved tail $\\kappa(S) > k$ by functional class", fontsize=10, fontweight="bold")
+ax2.set_title("Unresolved tail $\\kappa(S) > k$ by functional class", fontsize=10)
 ax2.grid(True, which="both", linestyle=":", alpha=0.5)
+ax2.yaxis.set_major_locator(FixedLocator([1e-2, 1e-1, 1e0, 1e1, 1e2]))
+ax2.yaxis.set_major_formatter(FuncFormatter(lambda v, _: "$10^{%d}$" % round(math.log10(v))))
+ax2.yaxis.set_minor_formatter(NullFormatter())
 
 plt.tight_layout()
 plt.savefig(os.path.join(FIG_DIR, "fig_taxonomy.pdf"))

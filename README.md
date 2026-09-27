@@ -7,6 +7,8 @@ Zhengyi Chen<sup>1</sup> and Ruqing Chen<sup>2</sup>
 <sup>1</sup> Guangxi Key Laboratory of Drug Discovery and Optimization, Guangxi Engineering Research Center for Pharmaceutical Molecular Screening and Druggability Evaluation, School of Pharmacy, Guilin Medical University, Guilin 541199, P. R. China (chenzhengyi@glmc.edu.cn)
 <sup>2</sup> GUT Geoservice Inc., Montreal, Québec, Canada (ruqing@hotmail.com)
 
+DOI: [10.5281/zenodo.23003752](https://doi.org/10.5281/zenodo.23003752)
+
 ## About
 
 An encoder is *local of order k* if it depends on a sequence only through its multiset of k-mers. Such an encoder is constant on the *spectral fibre* F<sub>k</sub>(S) of every sequence S, and the fibre entropy B<sub>k</sub>(S) = log<sub>2</sub> |F<sub>k</sub>(S)| is the number of bits of sequence identity it cannot see. This closing paper of an eight-part series turns that observation into an exact, proteome-wide accounting of sequence order information.
@@ -28,7 +30,7 @@ order-taxonomy/
 ├── results/    order_taxonomy_output.txt                 transcript of order_taxonomy.py
 │               order_taxonomy_summary.json               the same numbers, machine-readable
 ├── figures/    fig_taxonomy.pdf                          Figure 1
-├── README.md
+├── README.md, CITATION.cff
 └── LICENSE (code, MIT), LICENSE-CC-BY-4.0 (text, figure and derived data)
 ```
 
@@ -59,7 +61,9 @@ pdflatex order_taxonomy
   title     = {When does sequence order matter? An information-theoretic taxonomy of
                biological representation tasks and the limits of local encoding},
   year      = {2026},
-  publisher = {Zenodo}
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23003752},
+  url       = {https://doi.org/10.5281/zenodo.23003752}
 }
 ```
 
