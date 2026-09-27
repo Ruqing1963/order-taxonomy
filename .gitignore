@@ -1,0 +1,15 @@
+# LaTeX by-products
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+# Python
+__pycache__/
+*.pyc
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

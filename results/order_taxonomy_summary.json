@@ -1,0 +1,229 @@
+{
+  "n_proteins": 20431,
+  "decomp": [
+    {
+      "k": 1,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 0.0,
+      "mean_Bk_per_L": 3.8736,
+      "mean_I_loc_B1_pct": 0.0,
+      "mean_Bk_B1_pct": 100.0,
+      "Bk_pos_count": 20431,
+      "Bk_pos_pct": 100.0
+    },
+    {
+      "k": 2,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 1.3278,
+      "mean_Bk_per_L": 2.5458,
+      "mean_I_loc_B1_pct": 34.774,
+      "mean_Bk_B1_pct": 65.226,
+      "Bk_pos_count": 20422,
+      "Bk_pos_pct": 99.96
+    },
+    {
+      "k": 3,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 3.2204,
+      "mean_Bk_per_L": 0.6532,
+      "mean_I_loc_B1_pct": 83.342,
+      "mean_Bk_B1_pct": 16.658,
+      "Bk_pos_count": 20357,
+      "Bk_pos_pct": 99.64
+    },
+    {
+      "k": 4,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 3.8016,
+      "mean_Bk_per_L": 0.072,
+      "mean_I_loc_B1_pct": 98.145,
+      "mean_Bk_B1_pct": 1.855,
+      "Bk_pos_count": 18391,
+      "Bk_pos_pct": 90.02
+    },
+    {
+      "k": 5,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 3.8643,
+      "mean_Bk_per_L": 0.0094,
+      "mean_I_loc_B1_pct": 99.749,
+      "mean_Bk_B1_pct": 0.251,
+      "Bk_pos_count": 9504,
+      "Bk_pos_pct": 46.52
+    },
+    {
+      "k": 6,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 3.8701,
+      "mean_Bk_per_L": 0.0035,
+      "mean_I_loc_B1_pct": 99.903,
+      "mean_Bk_B1_pct": 0.097,
+      "Bk_pos_count": 3445,
+      "Bk_pos_pct": 16.86
+    },
+    {
+      "k": 8,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 3.8722,
+      "mean_Bk_per_L": 0.0014,
+      "mean_I_loc_B1_pct": 99.962,
+      "mean_Bk_B1_pct": 0.038,
+      "Bk_pos_count": 1346,
+      "Bk_pos_pct": 6.59
+    },
+    {
+      "k": 10,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 3.8729,
+      "mean_Bk_per_L": 0.0007,
+      "mean_I_loc_B1_pct": 99.981,
+      "mean_Bk_B1_pct": 0.019,
+      "Bk_pos_count": 854,
+      "Bk_pos_pct": 4.18
+    },
+    {
+      "k": 12,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 3.8732,
+      "mean_Bk_per_L": 0.0004,
+      "mean_I_loc_B1_pct": 99.989,
+      "mean_Bk_B1_pct": 0.011,
+      "Bk_pos_count": 614,
+      "Bk_pos_pct": 3.01
+    },
+    {
+      "k": 16,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 3.8735,
+      "mean_Bk_per_L": 0.0001,
+      "mean_I_loc_B1_pct": 99.996,
+      "mean_Bk_B1_pct": 0.004,
+      "Bk_pos_count": 327,
+      "Bk_pos_pct": 1.6
+    },
+    {
+      "k": 20,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 3.8735,
+      "mean_Bk_per_L": 0.0001,
+      "mean_I_loc_B1_pct": 99.998,
+      "mean_Bk_B1_pct": 0.002,
+      "Bk_pos_count": 194,
+      "Bk_pos_pct": 0.95
+    },
+    {
+      "k": 25,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 3.8736,
+      "mean_Bk_per_L": 0.0,
+      "mean_I_loc_B1_pct": 99.999,
+      "mean_Bk_B1_pct": 0.001,
+      "Bk_pos_count": 114,
+      "Bk_pos_pct": 0.56
+    },
+    {
+      "k": 30,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 3.8736,
+      "mean_Bk_per_L": 0.0,
+      "mean_I_loc_B1_pct": 99.999,
+      "mean_Bk_B1_pct": 0.001,
+      "Bk_pos_count": 81,
+      "Bk_pos_pct": 0.4
+    },
+    {
+      "k": 40,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 3.8736,
+      "mean_Bk_per_L": 0.0,
+      "mean_I_loc_B1_pct": 100.0,
+      "mean_Bk_B1_pct": 0.0,
+      "Bk_pos_count": 50,
+      "Bk_pos_pct": 0.24
+    },
+    {
+      "k": 50,
+      "med_I_comp_per_L": 0.3947,
+      "mean_I_loc_per_L": 3.8736,
+      "mean_Bk_per_L": 0.0,
+      "mean_I_loc_B1_pct": 100.0,
+      "mean_Bk_B1_pct": 0.0,
+      "Bk_pos_count": 37,
+      "Bk_pos_pct": 0.18
+    }
+  ],
+  "classes": [
+    {
+      "class": "Catalytic enzymes",
+      "n": 3449,
+      "med_L": 481,
+      "mean_B3_B1_pct": 17.28,
+      "mean_B5_B1_pct": 0.09,
+      "gt5_pct": 42.22,
+      "gt10_pct": 1.04,
+      "gt25_pct": 0.17,
+      "med_kappa": 5,
+      "p95_kappa": 7
+    },
+    {
+      "class": "Receptors, channels and transporters",
+      "n": 1816,
+      "med_L": 410.0,
+      "mean_B3_B1_pct": 17.23,
+      "mean_B5_B1_pct": 0.08,
+      "gt5_pct": 43.01,
+      "gt10_pct": 0.77,
+      "gt25_pct": 0.11,
+      "med_kappa": 5.0,
+      "p95_kappa": 7
+    },
+    {
+      "class": "Other globular and cellular proteins",
+      "n": 14153,
+      "med_L": 380,
+      "mean_B3_B1_pct": 16.23,
+      "mean_B5_B1_pct": 0.19,
+      "gt5_pct": 45.0,
+      "gt10_pct": 2.18,
+      "gt25_pct": 0.35,
+      "med_kappa": 5,
+      "p95_kappa": 8
+    },
+    {
+      "class": "C2H2 zinc-finger regulators",
+      "n": 747,
+      "med_L": 560,
+      "mean_B3_B1_pct": 17.8,
+      "mean_B5_B1_pct": 1.4,
+      "gt5_pct": 88.49,
+      "gt10_pct": 49.13,
+      "gt25_pct": 2.54,
+      "med_kappa": 10,
+      "p95_kappa": 23
+    },
+    {
+      "class": "Structural tandem-repeat proteins",
+      "n": 199,
+      "med_L": 195,
+      "mean_B3_B1_pct": 25.8,
+      "mean_B5_B1_pct": 4.14,
+      "gt5_pct": 86.43,
+      "gt10_pct": 39.7,
+      "gt25_pct": 9.05,
+      "med_kappa": 10,
+      "p95_kappa": 41
+    },
+    {
+      "class": "Segmental-duplication arrays",
+      "n": 67,
+      "med_L": 638,
+      "mean_B3_B1_pct": 19.99,
+      "mean_B5_B1_pct": 1.7,
+      "gt5_pct": 97.01,
+      "gt10_pct": 74.63,
+      "gt25_pct": 29.85,
+      "med_kappa": 16,
+      "p95_kappa": 257
+    }
+  ]
+}

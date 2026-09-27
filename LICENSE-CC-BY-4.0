@@ -1,0 +1,21 @@
+# Paper, figures and derived data: CC BY 4.0
+
+The text of the paper (`paper/order_taxonomy.tex`, `paper/order_taxonomy.pdf`), the figure
+(`figures/fig_taxonomy.pdf`) and the derived data and reference transcripts
+(`results/order_taxonomy_output.txt`, `results/order_taxonomy_summary.json`,
+`data/fibre_results.json`) are licensed under the **Creative Commons Attribution 4.0
+International** licence (CC BY 4.0):
+<https://creativecommons.org/licenses/by/4.0/> (legal code:
+<https://creativecommons.org/licenses/by/4.0/legalcode>).
+
+Attribution: *Zhengyi Chen and Ruqing Chen, When does sequence order matter? An
+information-theoretic taxonomy of biological representation tasks and the limits of local
+encoding, Zenodo (2026).*
+
+`data/fibre_results.json` (exact fibre sizes N_k and spectral resolution κ for every reviewed
+human protein) is taken unchanged from the companion repository
+<https://github.com/Ruqing1963/separation-resolution>, where it is released under the same
+licence by the same authors. It is derived from the reviewed human proteome of UniProtKB/Swiss-Prot,
+which the UniProt Consortium distributes under CC BY 4.0.
+
+All source code (`code/*.py`) is licensed under the MIT License (`LICENSE`).
